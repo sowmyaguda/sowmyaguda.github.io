@@ -26,6 +26,16 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Google Analytics (optional): replace G-XXXXXXX and uncomment to enable -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -78,6 +88,7 @@
       <div class="mt-4 d-flex gap-3 flex-wrap justify-content-center">
         <a href="#projects" class="btn btn-primary btn-pill"><i class="fa-solid fa-rocket me-2"></i>View Projects</a>
         <a href="#contact" class="btn btn-outline-light btn-pill"><i class="fa-solid fa-message me-2"></i>Get in Touch</a>
+        <a id="resumeBtn" href="assets/resume.pdf" download class="btn btn-outline-light btn-pill d-none"><i class="fa-solid fa-download me-2"></i>Download Resume</a>
       </div>
       <div class="social">
         <a href="mailto:sgshmy@missouri.edu" aria-label="Email" data-tooltip="Email"><i class="fa-solid fa-envelope"></i></a>
@@ -102,6 +113,7 @@
           <p>
             I’m a Computer Science graduate student passionate about building scalable, user-first software and applying machine learning to solve practical problems. I like shipping clean, maintainable systems and collaborating across product, design, and data to create impact.
           </p>
+          <p class="mb-2"><em>Fun fact:</em> I never miss a chance to optimize — from code paths to coffee brewing ratios.</p>
           <ul class="about-highlights">
             <li><i class="fa-solid fa-check"></i> Full‑stack and ML projects with real users</li>
             <li><i class="fa-solid fa-check"></i> Cloud‑native architectures (AWS serverless, containers)</li>
@@ -148,9 +160,16 @@
   <section id="projects" class="section">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up" data-text="PROJECTS">Featured Projects</h2>
+      <div class="filter-bar d-flex flex-wrap gap-2 justify-content-center mb-4" data-aos="fade-up" data-aos-delay="50">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ml">ML</button>
+        <button class="filter-btn" data-filter="cv">CV</button>
+        <button class="filter-btn" data-filter="cloud">Cloud</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+      </div>
       <div class="row g-4">
         <div class="col-md-6 col-lg-4" data-aos="zoom-in">
-          <article class="project card glass h-100">
+          <article class="project card glass h-100" data-tags="ml,cv">
             <div class="card-body">
               <div class="project-icon">
                 <i class="fa-solid fa-brain"></i>
@@ -172,7 +191,7 @@
           </article>
         </div>
         <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50">
-          <article class="project card glass h-100">
+          <article class="project card glass h-100" data-tags="cloud,web">
             <div class="card-body">
               <div class="project-icon">
                 <i class="fa-solid fa-cloud"></i>
@@ -194,7 +213,7 @@
           </article>
         </div>
         <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-          <article class="project card glass h-100">
+          <article class="project card glass h-100" data-tags="ml,web">
             <div class="card-body">
               <div class="project-icon">
                 <i class="fa-solid fa-face-smile"></i>
@@ -216,7 +235,7 @@
           </article>
         </div>
         <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="150">
-          <article class="project card glass h-100">
+          <article class="project card glass h-100" data-tags="ml,cv">
             <div class="card-body">
               <div class="project-icon">
                 <i class="fa-solid fa-bug"></i>
@@ -238,7 +257,7 @@
           </article>
         </div>
         <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-          <article class="project card glass h-100">
+          <article class="project card glass h-100" data-tags="cv">
             <div class="card-body">
               <div class="project-icon">
                 <i class="fa-solid fa-video"></i>
@@ -337,11 +356,11 @@
               <ul class="list-unstyled mb-0">
                 <li class="mb-2">
                   <strong>Brain Tumor Detection Using YOLOv7 and MBWN</strong>
-                  <div class="small text-muted">International Journal of Advanced Computer Science, 2023</div>
+                  <div class="small text-muted">International Journal of Advanced Computer Science, 2023 · <a href="#" target="_blank" rel="noopener">DOI</a></div>
                 </li>
                 <li>
                   <strong>Real-Time Detection of Infrastructure in Low-light Conditions</strong>
-                  <div class="small text-muted">IEEE Conference on Computer Vision, 2024</div>
+                  <div class="small text-muted">IEEE Conference on Computer Vision, 2024 · <a href="#" target="_blank" rel="noopener">DOI</a></div>
                 </li>
               </ul>
             </div>
@@ -354,8 +373,33 @@
               <ul class="list-unstyled mb-0">
                 <li class="mb-2"><strong>Academic Excellence Scholarship</strong> — University of Missouri (2023)</li>
                 <li class="mb-2"><strong>Gold Medal</strong> — GNI Technical Campus (2023)</li>
-                <li><strong>AWS Cloud Practitioner</strong> — Honeywell (2023)</li>
+                <li><strong>AWS Cloud Practitioner</strong> — <a href="#" target="_blank" rel="noopener">View Certificate</a> (2023)</li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up" data-text="WORDS">Testimonials</h2>
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-up">
+          <div class="card glass h-100">
+            <div class="card-body">
+              <p class="mb-2">“Sowmya brings clarity and momentum to every project. Her solutions are pragmatic, scalable, and well-communicated.”</p>
+              <div class="small text-muted">— Mentor, IEEE Student Branch</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card glass h-100">
+            <div class="card-body">
+              <p class="mb-2">“Exceptionally fast learner with strong ownership. Delivered ML features that improved accuracy and UX.”</p>
+              <div class="small text-muted">— Project Teammate</div>
             </div>
           </div>
         </div>
@@ -396,7 +440,7 @@
 
   <footer class="text-center py-4 footer">
     <div class="container small">
-      &copy; <span id="year"></span> Sowmya Guda • Built with care
+      &copy; <span id="year"></span> Sowmya Guda • Built with care · Visits: <span id="visitCount">—</span>
     </div>
   </footer>
 

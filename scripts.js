@@ -219,12 +219,9 @@
   const TypingAnimation = {
     element: null,
     phrases: [
-      'Software Engineer',
-      'ML Enthusiast', 
-      'Problem Solver',
-      'Data-Driven Builder',
-      'Full-Stack Developer',
-      'AI Researcher'
+      'Data Scientist',
+      'ML Enthusiast',
+      'Cloud Developer'
     ],
     
     init() {
@@ -387,6 +384,28 @@
     }
   };
 
+  // Project Filters
+  const ProjectFilters = {
+    init() {
+      const bar = document.querySelector('.filter-bar');
+      if (!bar) return;
+      bar.addEventListener('click', (e) => {
+        const btn = e.target.closest('.filter-btn');
+        if (!btn) return;
+        this.applyFilter(btn.dataset.filter);
+        bar.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b === btn));
+      });
+    },
+    applyFilter(filter) {
+      const cards = document.querySelectorAll('.project.card');
+      cards.forEach(card => {
+        const tags = (card.getAttribute('data-tags') || '').toLowerCase();
+        const show = filter === 'all' || tags.split(',').map(s => s.trim()).includes(filter);
+        card.parentElement.classList.toggle('d-none', !show);
+      });
+    }
+  };
+
   // Performance Optimization
   const PerformanceOptimizer = {
     init() {
@@ -459,6 +478,7 @@
     Navigation.init();
     ScrollAnimations.init();
     ProjectCards.init();
+    ProjectFilters.init();
     PerformanceOptimizer.init();
     
     // Initialize particle system after a short delay
@@ -480,6 +500,15 @@
     if (yearElement) {
       yearElement.textContent = new Date().getFullYear();
     }
+
+    // Simple visit counter (per-browser) for fun
+    try {
+      const key = 'visitCount';
+      const count = parseInt(localStorage.getItem(key) || '0', 10) + 1;
+      localStorage.setItem(key, String(count));
+      const vc = document.getElementById('visitCount');
+      if (vc) vc.textContent = count.toLocaleString();
+    } catch (_) {}
 
     // Add smooth scroll behavior to all anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

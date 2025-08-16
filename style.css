@@ -266,7 +266,7 @@ a:hover {
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
   font-weight: 800;
   margin-bottom: 1rem;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -282,7 +282,7 @@ a:hover {
 }
 
 .hero .lead {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 3.3vw, 1.5rem);
   color: var(--text-secondary);
   margin-bottom: 1rem;
 }
@@ -905,6 +905,30 @@ a:hover {
   color: var(--bg);
   border-color: var(--primary);
   transform: translateY(-3px);
+}
+
+/* Filter bar */
+.filter-bar {
+  gap: 0.5rem;
+}
+.filter-btn {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+.filter-btn:hover { 
+  transform: translateY(-2px); 
+  border-color: var(--primary); 
+  color: var(--primary);
+}
+.filter-btn.active {
+  background: rgba(var(--primary-rgb), 0.15);
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 /* Tooltips */
