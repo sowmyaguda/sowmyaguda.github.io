@@ -632,7 +632,7 @@
       const data = new FormData(amaForm);
       const subject = encodeURIComponent('AMA Question from Portfolio');
       const body = encodeURIComponent(`Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\nQuestion:\n${data.get('question')}`);
-      window.location.href = `mailto:sgshmy@missouri.edu?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:sghmy@missouri.edu?subject=${subject}&body=${body}`;
     });
   }
 

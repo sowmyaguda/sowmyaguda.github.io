@@ -533,6 +533,16 @@ a:hover {
   height: 100px;
 }
 
+/* Profile picture */
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  border: 3px solid rgba(var(--primary-rgb), 0.4);
+}
+
 /* Stack */
 .stack-card { text-align: center; padding: 1.25rem; }
 .stack-icon { 
