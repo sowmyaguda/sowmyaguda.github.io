@@ -1,327 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio of Sowmya Guda, a computer science graduate student and machine learning enthusiast." />
-    <meta name="keywords" content="Sowmya Guda, portfolio, machine learning, software engineer" />
-    <title>Sowmya Guda | Portfolio</title>
-    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/131102430" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv7eJyP3BUw9O7yO5p2K6N3huwNG0Ax7Anxr1LkKkvnN0ksdkrd" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-Zus9JX1iG5xW7Y+0Ax7Anxr1LkKkvnN0ksdkrdJH7RmYTD3Wx/89ZbduCMsZ/HdlAUPI0dR1vZ1tcHTfb3e8sg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Sowmya Guda — Software Engineer and ML enthusiast. Projects, skills, education, and ways to connect." />
+  <meta name="keywords" content="Sowmya Guda, portfolio, software engineer, machine learning, data science, resume, projects" />
+  <meta name="author" content="Sowmya Guda" />
+  <link rel="canonical" href="https://sowmyaguda.github.io/" />
+  <title>Sowmya Guda — Portfolio</title>
+  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/131102430" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sowmya Guda — Portfolio" />
+  <meta property="og:description" content="Software Engineer and ML enthusiast. Explore projects and experience." />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/131102430" />
+  <meta property="og:url" content="https://sowmyaguda.github.io/" />
+  <meta name="twitter:card" content="summary" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sowmya Guda",
+    "url": "https://sowmyaguda.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/sowmyaguda/",
+      "https://github.com/sowmyaguda"
+    ],
+    "jobTitle": "Software Engineer",
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "University of Missouri"},
+      {"@type": "CollegeOrUniversity", "name": "Guru Nanak Institutions Technical Campus"}
+    ]
+  }
+  </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#home">Sowmya Guda</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#leadership">Leadership</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-glass fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#home">Sowmya Guda</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbars">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3"><button id="themeToggle" class="btn btn-sm btn-outline-secondary" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container d-flex flex-column align-items-center text-center">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/131102430" alt="Sowmya Guda" />
+      <h1 class="display-5 fw-bold mt-3">Hi, I'm Sowmya</h1>
+      <p class="lead mb-3"><span id="typed">Software Engineer • ML Enthusiast • Problem Solver</span></p>
+      <p class="tagline">I build reliable, data-driven products that feel delightful.</p>
+      <div class="mt-3 d-flex gap-2 flex-wrap justify-content-center">
+        <a href="#projects" class="btn btn-primary btn-pill"><i class="fa-solid fa-rocket me-2"></i>See Projects</a>
+        <a href="mailto:sgshmy@missouri.edu" class="btn btn-outline-light btn-pill"><i class="fa-solid fa-envelope me-2"></i>Contact</a>
+        <a href="https://github.com/sowmyaguda" target="_blank" rel="noopener" class="btn btn-outline-light btn-pill"><i class="fa-brands fa-github me-2"></i>GitHub</a>
+      </div>
+      <div class="social mt-4">
+        <a href="mailto:sgshmy@missouri.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/sowmyaguda" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/sowmyaguda" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">About</h2>
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8" data-aos="fade-right">
+          <p>
+            I’m a Computer Science graduate student passionate about building scalable, user-first software and applying machine learning to solve practical problems. I like shipping clean, maintainable systems and collaborating across product, design, and data to create impact.
+          </p>
+          <ul class="about-highlights">
+            <li><i class="fa-solid fa-check"></i> Full‑stack and ML projects with real users</li>
+            <li><i class="fa-solid fa-check"></i> Cloud‑native architectures (AWS serverless, containers)</li>
+            <li><i class="fa-solid fa-check"></i> Strong fundamentals: algorithms, data, and systems</li>
+          </ul>
+        </div>
+        <div class="col-lg-4" data-aos="fade-left">
+          <div class="stats glass p-3">
+            <div class="d-flex justify-content-between"><span>GPA (MS)</span><strong>3.74/4.00</strong></div>
+            <div class="d-flex justify-content-between"><span>Publications</span><strong>2</strong></div>
+            <div class="d-flex justify-content-between"><span>Projects</span><strong>10+ </strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience / Leadership timeline -->
+  <section id="experience" class="section alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Experience & Leadership</h2>
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-point"></div>
+          <div class="timeline-card glass">
+            <h5 class="mb-1">IEEE Student Branch Chair</h5>
+            <div class="small text-muted">Guru Nanak Institutions • 2022 – 2023</div>
+            <p class="mb-0">Led student tech initiatives, organized workshops, and mentored peers on ML and cloud topics.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="timeline-point"></div>
+          <div class="timeline-card glass">
+            <h5 class="mb-1">Mentor — AWS DeepRacer Student League</h5>
+            <div class="small text-muted">2021</div>
+            <p class="mb-0">Coached students on reinforcement learning foundations and model deployment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+          <article class="project card glass h-100">
+            <div class="card-body">
+              <h5 class="card-title">Brain Tumor Detection with MR Images</h5>
+              <p class="card-text">YOLOv7 + ResNet to classify tumor regions. Achieved ~95% accuracy on curated dataset.</p>
+              <div class="tags">
+                <span>YOLOv7</span><span>Python</span><span>OpenCV</span>
+              </div>
+              <a href="https://github.com/sowmyaguda" target="_blank" rel="noopener" class="stretched-link"></a>
             </div>
+          </article>
         </div>
-    </nav>
-
-    <header class="hero d-flex align-items-center" id="home">
-        <div class="container text-center">
-            <h1 class="display-4 fw-bold">Sowmya Guda</h1>
-            <p class="lead">Computer Science Graduate Student | Software Engineer | ML Enthusiast</p>
-            <p class="tagline fst-italic">Driven by curiosity. Building intelligent systems to solve real-world problems.</p>
-            <p class="fs-5">
-                <a href="mailto:sgshmy@missouri.edu" class="me-3 text-white"><i class="fa-solid fa-envelope me-1"></i>sgshmy@missouri.edu</a>
-                <a href="https://linkedin.com/in/sowmyaguda" class="me-3 text-white"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/sowmyaguda" class="text-white"><i class="fa-brands fa-github"></i></a>
-            </p>
-        </div>
-    </header>
-
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="section-title">About</h2>
-            <p>
-                I am a motivated and results-oriented Computer Science graduate student with expertise in software engineering,
-                machine learning, data science, and cloud technologies. Passionate about solving complex problems and building scalable
-                systems, I strive to bridge theoretical knowledge with practical applications to drive impactful results.
-            </p>
-        </div>
-    </section>
-
-    <section id="education" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h4>University of Missouri, Columbia, MO</h4>
-                    <p>Master of Science in Computer Science (Aug 2023 – May 2025)<br/>GPA: 3.74/4.00</p>
-                    <p><strong>Coursework:</strong> Artificial Intelligence, Advanced Database Management Systems, Data Mining, Big Data Analytics, Machine Learning, Algorithms, Software Engineering.</p>
-                </div>
-                <div class="col-md-6">
-                    <h4>Guru Nanak Institutions Technical Campus, Hyderabad, India</h4>
-                    <p>Bachelor of Technology in Computer Science (Jul 2019 – Jul 2023)<br/>GPA: 3.68/4.00</p>
-                    <p><strong>Coursework:</strong> Big Data Analytics, Machine Learning, Cloud Computing, Data Structures, Operating Systems, Computer Networks.</p>
-                </div>
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50">
+          <article class="project card glass h-100">
+            <div class="card-body">
+              <h5 class="card-title">Cloud-based Social Media Kiosk</h5>
+              <p class="card-text">Serverless media sharing using AWS S3, Lambda, API Gateway. Role-based access and presigned URLs.</p>
+              <div class="tags">
+                <span>AWS</span><span>Serverless</span><span>Security</span>
+              </div>
+              <a href="https://github.com/sowmyaguda" target="_blank" rel="noopener" class="stretched-link"></a>
             </div>
+          </article>
         </div>
-    </section>
-
-    <section id="projects" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Brain Tumor Detection with MR Images</h5>
-                            <p class="card-text">Implemented YOLOv7 and ResNet-based models to classify tumor regions with 95% accuracy.</p>
-                            <div class="mb-2">
-                                <span class="badge bg-secondary">YOLOv7</span>
-                                <span class="badge bg-secondary">Python</span>
-                            </div>
-                            <a href="https://github.com/sowmyaguda" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Cloud-based Social Media Kiosk</h5>
-                            <p class="card-text">Engineered a platform enabling secure photo uploads and sharing using AWS S3, Lambda, and API Gateway.</p>
-                            <div class="mb-2">
-                                <span class="badge bg-secondary">AWS</span>
-                                <span class="badge bg-secondary">Serverless</span>
-                            </div>
-                            <a href="https://github.com/sowmyaguda" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Facial Expression Recognition & Mood-Based Music Analysis</h5>
-                            <p class="card-text">Built a real-time system leveraging CNNs and audio sentiment analysis to suggest playlists.</p>
-                            <div class="mb-2">
-                                <span class="badge bg-secondary">CNN</span>
-                                <span class="badge bg-secondary">Flask</span>
-                            </div>
-                            <a href="https://github.com/sowmyaguda" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Automated Detection of Insect-like Herbivorous</h5>
-                            <p class="card-text">Developed a computer vision pipeline to monitor Kachnar trees and identify threats with 93% accuracy.</p>
-                            <div class="mb-2">
-                                <span class="badge bg-secondary">Computer Vision</span>
-                                <span class="badge bg-secondary">TensorFlow</span>
-                            </div>
-                            <a href="https://github.com/sowmyaguda" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Real-Time Detection of Infrastructure under Low-light</h5>
-                            <p class="card-text">Designed an object detection solution for long-distance, low-light scenarios to support surveillance.</p>
-                            <div class="mb-2">
-                                <span class="badge bg-secondary">Object Detection</span>
-                                <span class="badge bg-secondary">OpenCV</span>
-                            </div>
-                            <a href="https://github.com/sowmyaguda" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">GitHub</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+          <article class="project card glass h-100">
+            <div class="card-body">
+              <h5 class="card-title">Facial Expression Recognition + Mood Music</h5>
+              <p class="card-text">Real-time CNN + audio sentiment analysis to recommend playlists from camera input.</p>
+              <div class="tags">
+                <span>CNN</span><span>Flask</span><span>Python</span>
+              </div>
+              <a href="https://github.com/sowmyaguda" target="_blank" rel="noopener" class="stretched-link"></a>
             </div>
+          </article>
         </div>
-    </section>
-
-    <section id="skills" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <h5>Languages</h5>
-                    <div class="mb-2">
-                        <span>Python</span>
-                        <div class="progress" style="height: 6px;">
-                            <div class="progress-bar bg-primary" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="mb-2">
-                        <span>Java</span>
-                        <div class="progress" style="height: 6px;">
-                            <div class="progress-bar bg-primary" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="mb-2">
-                        <span>C</span>
-                        <div class="progress" style="height: 6px;">
-                            <div class="progress-bar bg-primary" style="width: 70%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <h5>Frameworks</h5>
-                    <ul class="list-unstyled">
-                        <li>Django</li>
-                        <li>React</li>
-                        <li>Node.js</li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5>Cloud & DevOps</h5>
-                    <ul class="list-unstyled">
-                        <li>AWS</li>
-                        <li>Azure</li>
-                        <li>Docker</li>
-                        <li>Git & GitHub</li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5>Databases</h5>
-                    <ul class="list-unstyled">
-                        <li>PostgreSQL</li>
-                        <li>MySQL</li>
-                        <li>MongoDB</li>
-                    </ul>
-                </div>
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+          <article class="project card glass h-100">
+            <div class="card-body">
+              <h5 class="card-title">Automated Detection of Insect-like Herbivorous</h5>
+              <p class="card-text">Computer vision pipeline to monitor Kachnar trees and identify threats with 93% accuracy.</p>
+              <div class="tags">
+                <span>TensorFlow</span><span>Computer Vision</span>
+              </div>
+              <a href="https://github.com/sowmyaguda" target="_blank" rel="noopener" class="stretched-link"></a>
             </div>
+          </article>
         </div>
-    </section>
-
-    <section id="publications" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Publications</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Brain Tumor Detection Using YOLOv7 and MBWN: A Novel CNN Architecture</h5>
-                            <p class="card-text"><em>International Journal of Advanced Computer Science</em>, 2023.</p>
-                            <a href="#" class="btn btn-outline-primary btn-sm">DOI</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Real-Time Detection of Infrastructure in Low-light Conditions</h5>
-                            <p class="card-text"><em>IEEE Conference on Computer Vision</em>, 2024.</p>
-                            <a href="#" class="btn btn-outline-primary btn-sm">DOI</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50">
+          <article class="project card glass h-100">
+            <div class="card-body">
+              <h5 class="card-title">Low-light Infrastructure Detection</h5>
+              <p class="card-text">Object detection tuned for long-distance, low-light scenarios to support surveillance.</p>
+              <div class="tags">
+                <span>OpenCV</span><span>Object Detection</span>
+              </div>
+              <a href="https://github.com/sowmyaguda" target="_blank" rel="noopener" class="stretched-link"></a>
             </div>
+          </article>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="awards" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">Honors & Awards</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Academic Excellence Scholarship</h5>
-                            <p class="card-text">University of Missouri, 2023</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Gold Medal for Outstanding Performance</h5>
-                            <p class="card-text">GNI Technical Campus, 2023</p>
-                        </div>
-                    </div>
-                </div>
+  <!-- Skills -->
+  <section id="skills" class="section alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Skills</h2>
+      <div class="row g-3" data-aos="fade-up" data-aos-delay="50">
+        <div class="col-lg-3 col-md-4">
+          <h6 class="text-muted">Languages</h6>
+          <div class="chips">
+            <span>Python</span><span>Java</span><span>JavaScript</span><span>TypeScript</span><span>C++</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h6 class="text-muted">ML/Data</h6>
+          <div class="chips">
+            <span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span><span>Pandas</span><span>NumPy</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h6 class="text-muted">Cloud/DevOps</h6>
+          <div class="chips">
+            <span>AWS</span><span>Docker</span><span>Serverless</span><span>CI/CD</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h6 class="text-muted">Databases</h6>
+          <div class="chips">
+            <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Education</h2>
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-right">
+          <div class="card glass h-100">
+            <div class="card-body">
+              <h5>University of Missouri, Columbia, MO</h5>
+              <p class="mb-1">Master of Science in Computer Science (Aug 2023 – May 2025)</p>
+              <p class="text-muted small mb-2">GPA: 3.74/4.00</p>
+              <p class="mb-0"><strong>Coursework:</strong> AI, Advanced DBMS, Data Mining, Big Data, ML, Algorithms, Software Engineering.</p>
             </div>
+          </div>
         </div>
-    </section>
-
-    <section id="certifications" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Certifications</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Cloud Practitioner Essentials</h5>
-                            <p class="card-text">Amazon Web Services</p>
-                            <a href="#" class="btn btn-outline-primary btn-sm">Verify</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">AWS Cloud Practitioner</h5>
-                            <p class="card-text">Honeywell, 2023</p>
-                            <a href="#" class="btn btn-outline-primary btn-sm">Verify</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <div class="card glass h-100">
+            <div class="card-body">
+              <h5>Guru Nanak Institutions Technical Campus, Hyderabad, India</h5>
+              <p class="mb-1">Bachelor of Technology in Computer Science (Jul 2019 – Jul 2023)</p>
+              <p class="text-muted small mb-2">GPA: 3.68/4.00</p>
+              <p class="mb-0"><strong>Coursework:</strong> Big Data, ML, Cloud Computing, Data Structures, OS, Networks.</p>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="leadership" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">Volunteering & Leadership</h2>
-            <ul>
-                <li>IEEE Student Branch Chair, Guru Nanak Institutions (2022 – 2023)</li>
-                <li>Mentor, AWS DeepRacer Student League (2021)</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-center">Contact</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form class="contact-form" action="mailto:sgshmy@missouri.edu" method="POST" enctype="text/plain">
-                        <input type="text" class="form-control" name="name" placeholder="Name" required>
-                        <input type="email" class="form-control" name="email" placeholder="Email" required>
-                        <textarea class="form-control" name="message" rows="4" placeholder="Message" required></textarea>
-                        <button type="submit" class="btn btn-primary">Send</button>
-                    </form>
-                    <div class="text-center mt-3">
-                        <a href="mailto:sgshmy@missouri.edu" class="me-3"><i class="fa-solid fa-envelope fa-lg"></i></a>
-                        <a href="https://linkedin.com/in/sowmyaguda" class="me-3" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin fa-lg"></i></a>
-                        <a href="https://github.com/sowmyaguda" target="_blank" rel="noopener"><i class="fa-brands fa-github fa-lg"></i></a>
-                    </div>
-                </div>
+  <!-- Publications / Awards / Certs condensed -->
+  <section id="publications" class="section alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Publications & Honors</h2>
+      <div class="row g-4">
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="card glass h-100">
+            <div class="card-body">
+              <h5 class="mb-3">Publications</h5>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2">
+                  <strong>Brain Tumor Detection Using YOLOv7 and MBWN</strong>
+                  <div class="small text-muted">International Journal of Advanced Computer Science, 2023</div>
+                </li>
+                <li>
+                  <strong>Real-Time Detection of Infrastructure in Low-light Conditions</strong>
+                  <div class="small text-muted">IEEE Conference on Computer Vision, 2024</div>
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
-    </section>
-
-    <footer class="text-center py-4 bg-dark text-white">
-        <div class="container">
-            &copy; <span id="year"></span> Sowmya Guda. All rights reserved.
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card glass h-100">
+            <div class="card-body">
+              <h5 class="mb-3">Honors & Certifications</h5>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2"><strong>Academic Excellence Scholarship</strong> — University of Missouri (2023)</li>
+                <li class="mb-2"><strong>Gold Medal</strong> — GNI Technical Campus (2023)</li>
+                <li><strong>AWS Cloud Practitioner</strong> — Honeywell (2023)</li>
+              </ul>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5mZx4lB7xGTFeoDyAJ6Digw1k3D6Z0fjQXpressnkn" crossorigin="anonymous"></script>
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title text-center" data-aos="fade-up">Get In Touch</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-7" data-aos="fade-up" data-aos-delay="50">
+          <div class="card glass">
+            <div class="card-body">
+              <p class="text-center mb-4">Open to full-time Software/ML roles starting 2025. Drop a note — I reply quickly.</p>
+              <form class="contact-form" action="mailto:sgshmy@missouri.edu" method="POST" enctype="text/plain">
+                <div class="row g-3">
+                  <div class="col-md-6"><input type="text" class="form-control" name="name" placeholder="Your name" required></div>
+                  <div class="col-md-6"><input type="email" class="form-control" name="email" placeholder="Your email" required></div>
+                  <div class="col-12"><textarea class="form-control" name="message" rows="4" placeholder="Message" required></textarea></div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3 flex-wrap gap-2">
+                  <button type="submit" class="btn btn-primary btn-pill"><i class="fa-solid fa-paper-plane me-2"></i>Send</button>
+                  <div class="d-flex gap-3">
+                    <a href="mailto:sgshmy@missouri.edu" class="link-underline">sgshmy@missouri.edu</a>
+                    <a href="https://linkedin.com/in/sowmyaguda" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/sowmyaguda" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-4 footer">
+    <div class="container small">
+      &copy; <span id="year"></span> Sowmya Guda • Built with care
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
+
