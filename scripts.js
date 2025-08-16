@@ -277,6 +277,31 @@
     }
   };
 
+  // Count-up for stats
+  const Counters = {
+    run() {
+      const stats = document.querySelectorAll('.stats strong');
+      stats.forEach(el => {
+        const target = parseFloat((el.textContent || '0').replace(/[^0-9.]/g, ''));
+        if (!isFinite(target)) return;
+        el.dataset.target = String(target);
+        el.textContent = '0';
+        this.animate(el, 0, target, 1000);
+      });
+    },
+    animate(el, start, end, duration) {
+      const startTime = performance.now();
+      const step = (now) => {
+        const p = Math.min((now - startTime) / duration, 1);
+        const val = Math.floor(start + (end - start) * p);
+        el.textContent = String(val);
+        if (p < 1) requestAnimationFrame(step);
+        else el.textContent = el.dataset.target;
+      };
+      requestAnimationFrame(step);
+    }
+  };
+
   // Scroll Animations
   const ScrollAnimations = {
     init() {
@@ -480,6 +505,16 @@
     ProjectCards.init();
     ProjectFilters.init();
     PerformanceOptimizer.init();
+    // Counter trigger when About section intersects
+    try {
+      const about = document.getElementById('about');
+      if (about) {
+        const obs = new IntersectionObserver((entries, o) => {
+          if (entries.some(e => e.isIntersecting)) { Counters.run(); o.disconnect(); }
+        }, { threshold: 0.3 });
+        obs.observe(about);
+      }
+    } catch(_) {}
     
     // Initialize particle system after a short delay
     setTimeout(() => {
@@ -523,6 +558,12 @@
         }
       });
     });
+  });
+
+  // Hide preloader on load
+  window.addEventListener('load', () => {
+    const pre = document.getElementById('preloader');
+    if (pre) pre.style.display = 'none';
   });
 
   // Handle window resize
@@ -575,4 +616,75 @@
     toggleTop();
     backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
+
+  // AMA button + modal
+  const amaBtn = document.getElementById('amaButton');
+  if (amaBtn && window.bootstrap) {
+    amaBtn.addEventListener('click', () => {
+      const modal = new bootstrap.Modal(document.getElementById('amaModal'));
+      modal.show();
+    });
+  }
+  const amaForm = document.getElementById('amaForm');
+  if (amaForm) {
+    amaForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(amaForm);
+      const subject = encodeURIComponent('AMA Question from Portfolio');
+      const body = encodeURIComponent(`Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\nQuestion:\n${data.get('question')}`);
+      window.location.href = `mailto:sgshmy@missouri.edu?subject=${subject}&body=${body}`;
+    });
+  }
+
+  // Lightweight GitHub activity feed (graceful fail)
+  (function loadActivity(){
+    const feed = document.getElementById('activityFeed');
+    if (!feed) return;
+    fetch('https://api.github.com/users/sowmyaguda/events/public')
+      .then(r => r.ok ? r.json() : [])
+      .then(items => {
+        feed.innerHTML = '';
+        (items || []).slice(0,5).forEach(ev => {
+          const li = document.createElement('li');
+          const type = ev.type.replace(/Event$/,'');
+          const repo = ev.repo ? ev.repo.name : '';
+          li.textContent = `• ${type} @ ${repo}`;
+          feed.appendChild(li);
+        });
+        if (!feed.children.length) feed.innerHTML = '<li class="text-muted">No recent public events.</li>';
+      }).catch(() => { /* silent */ });
+  })();
+
+  // Project stars (localStorage)
+  (function stars(){
+    const cards = document.querySelectorAll('.project.card');
+    cards.forEach((card, idx) => {
+      const key = `star:${idx}`;
+      const btn = document.createElement('button');
+      btn.className = 'project-star';
+      btn.innerHTML = '⭐ <span>0</span>';
+      card.querySelector('.project-links')?.appendChild(btn);
+      const span = btn.querySelector('span');
+      const count = parseInt(localStorage.getItem(key) || '0', 10);
+      span.textContent = String(count);
+      btn.addEventListener('click', () => {
+        const n = parseInt(localStorage.getItem(key) || '0', 10) + 1;
+        localStorage.setItem(key, String(n));
+        span.textContent = String(n);
+      });
+    });
+  })();
+
+  // Konami code Easter egg → toggle theme
+  (function konami(){
+    const seq = [38,38,40,40,37,39,37,39,66,65];
+    const buf = [];
+    window.addEventListener('keydown', (e) => {
+      buf.push(e.keyCode);
+      while (buf.length > seq.length) buf.shift();
+      if (seq.every((v,i)=>v===buf[i])) {
+        document.getElementById('themeToggle')?.click();
+      }
+    });
+  })();
 })();
