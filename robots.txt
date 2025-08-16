@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sowmyaguda.github.io/sitemap.xml
+

@@ -73,5 +73,21 @@
   // Year in footer
   const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
-})();
 
+  // Resume auto-detect: show Download button if assets/resume.pdf exists
+  const resumeBtn = document.getElementById('resumeBtn');
+  if (resumeBtn) {
+    fetch(resumeBtn.getAttribute('href'), { method: 'HEAD' })
+      .then(r => { if (r.ok) resumeBtn.classList.remove('d-none'); })
+      .catch(() => {});
+  }
+
+  // Back to top button behavior
+  const backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    const toggleTop = () => backToTop.classList.toggle('show', window.scrollY > 300);
+    window.addEventListener('scroll', toggleTop, { passive: true });
+    toggleTop();
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+})();

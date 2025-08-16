@@ -71,7 +71,7 @@
   <header class="hero" id="home">
     <div class="hero-bg"></div>
     <div class="container d-flex flex-column align-items-center text-center">
-      <img class="avatar" src="https://avatars.githubusercontent.com/u/131102430" alt="Sowmya Guda" />
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/131102430" alt="Sowmya Guda" loading="lazy" />
       <h1 class="display-5 fw-bold mt-3">Hi, I'm Sowmya</h1>
       <p class="lead mb-3"><span id="typed">Software Engineer • ML Enthusiast • Problem Solver</span></p>
       <p class="tagline">I build reliable, data-driven products that feel delightful.</p>
@@ -79,6 +79,8 @@
         <a href="#projects" class="btn btn-primary btn-pill"><i class="fa-solid fa-rocket me-2"></i>See Projects</a>
         <a href="mailto:sgshmy@missouri.edu" class="btn btn-outline-light btn-pill"><i class="fa-solid fa-envelope me-2"></i>Contact</a>
         <a href="https://github.com/sowmyaguda" target="_blank" rel="noopener" class="btn btn-outline-light btn-pill"><i class="fa-brands fa-github me-2"></i>GitHub</a>
+        <a id="resumeBtn" href="assets/resume.pdf" target="_blank" rel="noopener" class="btn btn-outline-light btn-pill d-none"><i class="fa-solid fa-file-arrow-down me-2"></i>Download Resume</a>
+        <a href="https://www.linkedin.com/in/sowmyaguda/" target="_blank" rel="noopener" class="btn btn-outline-light btn-pill"><i class="fa-brands fa-linkedin me-2"></i>LinkedIn</a>
       </div>
       <div class="social mt-4">
         <a href="mailto:sgshmy@missouri.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
@@ -345,9 +347,10 @@
     </div>
   </footer>
 
+  <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="scripts.js"></script>
 </body>
 </html>
-

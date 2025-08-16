@@ -135,6 +135,18 @@ a:hover { color: var(--primary-strong); text-decoration: underline; }
 .theme-light .avatar { border-color: rgba(0,0,0,0.15); }
 .theme-light .tags span, .theme-light .chips span { background: rgba(0,0,0,0.04); }
 
+/* Back to top */
+.back-to-top {
+  position: fixed; right: 16px; bottom: 16px; z-index: 1000;
+  width: 42px; height: 42px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--border); box-shadow: var(--shadow);
+  opacity: 0; pointer-events: none; transform: translateY(10px);
+  transition: opacity .2s ease, transform .2s ease;
+}
+.back-to-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
 @media (max-width: 576px) {
   .avatar { width: 96px; height: 96px; }
 }
