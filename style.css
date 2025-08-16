@@ -933,3 +933,9 @@ a:hover {
 [data-tooltip]:hover::after {
   opacity: 1;
 }
+
+/* AOS fallback: show content if AOS JS fails to init */
+[data-aos]:not(.aos-init) {
+  opacity: 1 !important;
+  transform: none !important;
+}

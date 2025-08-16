@@ -292,6 +292,20 @@
           easing: 'ease-out-quart',
           disable: 'mobile'
         });
+      } else {
+        // Fallback: ensure elements with data-aos are visible if AOS fails to load
+        this.enableAOSFallback();
+      }
+    },
+
+    enableAOSFallback() {
+      try {
+        document.querySelectorAll('[data-aos]').forEach(el => {
+          // Mirror AOS behavior so CSS shows content
+          el.classList.add('aos-init', 'aos-animate');
+        });
+      } catch (_) {
+        // no-op
       }
     },
 
