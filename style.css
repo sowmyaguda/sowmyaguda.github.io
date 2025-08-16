@@ -266,8 +266,8 @@ a:hover {
 }
 
 .avatar {
-  width: 150px; 
-  height: 150px; 
+  width: clamp(180px, 22vw, 260px); 
+  height: clamp(180px, 22vw, 260px); 
   border-radius: 50%;
   border: 3px solid var(--primary);
   box-shadow: 0 0 50px rgba(var(--primary-rgb), 0.5);
@@ -535,8 +535,8 @@ a:hover {
 
 /* Profile picture */
 .profile-pic {
-  width: 180px;
-  height: 180px;
+  width: clamp(180px, 25vw, 260px);
+  height: clamp(180px, 25vw, 260px);
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   object-fit: cover;
