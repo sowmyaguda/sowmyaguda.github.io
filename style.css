@@ -97,6 +97,23 @@ p {
   color: var(--secondary) !important;
 }
 
+/* Fix list items and strong elements in dark mode */
+li {
+  color: var(--text) !important;
+}
+
+strong {
+  color: var(--text) !important;
+  font-weight: 600;
+}
+
+/* Ensure badge elements are visible */
+.badge-card {
+  color: var(--text) !important;
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+}
+
 /* Preloader */
 .preloader {
   position: fixed; inset: 0; display: grid; place-items: center;
