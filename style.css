@@ -670,11 +670,39 @@ a:hover {
   flex: 1;
 }
 
-.skill-emoji {
-  font-size: 1.5rem;
+.skill-icon-tech {
   width: 35px;
-  text-align: center;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 1.4rem;
 }
+
+/* Technology-specific colors */
+.skill-icon-tech.python { background: #3776ab; color: #ffd43b; }
+.skill-icon-tech.java { background: #f89820; color: white; }
+.skill-icon-tech.javascript { background: #f7df1e; color: #000; }
+.skill-icon-tech.cpp { background: #00599c; color: white; }
+.skill-icon-tech.sql { background: #336791; color: white; }
+
+.skill-icon-tech.tensorflow { background: #ff6f00; color: white; }
+.skill-icon-tech.pytorch { background: #ee4c2c; color: white; }
+.skill-icon-tech.opencv { background: #5c3ee8; color: white; }
+.skill-icon-tech.pandas { background: #150458; color: #e70488; }
+.skill-icon-tech.sklearn { background: #f7931e; color: white; }
+
+.skill-icon-tech.fastapi { background: #009688; color: white; }
+.skill-icon-tech.nodejs { background: #339933; color: white; }
+.skill-icon-tech.react { background: #61dafb; color: #000; }
+.skill-icon-tech.salesforce { background: #00a1e0; color: white; }
+
+.skill-icon-tech.aws { background: #ff9900; color: white; }
+.skill-icon-tech.docker { background: #2496ed; color: white; }
+.skill-icon-tech.kubernetes { background: #326ce5; color: white; }
+.skill-icon-tech.jenkins { background: #d33833; color: white; }
+.skill-icon-tech.hpc { background: var(--primary); color: var(--bg); }
 
 .skill-info div {
   flex: 1;
