@@ -602,6 +602,128 @@ a:hover {
   height: 100px;
 }
 
+/* Technical Expertise Section */
+.skill-card {
+  padding: 1.5rem;
+  border-radius: 15px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(var(--primary-rgb), 0.2);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: var(--bg);
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+.skill-header h5 {
+  margin: 0;
+  color: var(--text) !important;
+  font-weight: 600;
+}
+
+.skill-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: var(--surface);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  background: var(--surface-hover);
+  transform: translateX(5px);
+}
+
+.skill-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.skill-emoji {
+  font-size: 1.5rem;
+  width: 35px;
+  text-align: center;
+}
+
+.skill-info div {
+  flex: 1;
+}
+
+.skill-info strong {
+  display: block;
+  color: var(--text) !important;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.skill-info small {
+  color: var(--muted) !important;
+  font-size: 0.85rem;
+}
+
+.skill-level {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.skill-level.expert {
+  background: rgba(var(--primary-rgb), 0.2);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.skill-level.proficient {
+  background: rgba(var(--secondary-rgb), 0.2);
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+}
+
+.skill-level.intermediate {
+  background: rgba(255, 215, 0, 0.2);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.skill-level.current {
+  background: var(--surface-hover);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
 /* Profile picture */
 .profile-pic {
   width: clamp(180px, 25vw, 260px);
