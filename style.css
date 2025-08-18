@@ -277,6 +277,9 @@ a:hover {
   box-shadow: 0 0 50px rgba(var(--primary-rgb), 0.5);
   margin-bottom: 2rem;
   animation: float 6s ease-in-out infinite;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
 }
 
 @keyframes float {
