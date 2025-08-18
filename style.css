@@ -58,6 +58,45 @@ body {
   scroll-padding-top: 80px;
 }
 
+/* Fix Bootstrap text utilities for dark mode */
+.text-muted {
+  color: var(--muted) !important;
+}
+
+.small {
+  color: var(--text-secondary) !important;
+}
+
+.small.text-muted {
+  color: var(--muted) !important;
+}
+
+/* Ensure all heading and text elements use theme colors */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text) !important;
+}
+
+.card-title {
+  color: var(--primary) !important;
+}
+
+.card-text {
+  color: var(--text-secondary) !important;
+}
+
+/* Fix any remaining Bootstrap overrides */
+.lead {
+  color: var(--text-secondary) !important;
+}
+
+p {
+  color: var(--text) !important;
+}
+
+.timeline-card .small {
+  color: var(--secondary) !important;
+}
+
 /* Preloader */
 .preloader {
   position: fixed; inset: 0; display: grid; place-items: center;
